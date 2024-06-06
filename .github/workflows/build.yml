@@ -1,0 +1,32 @@
+name: ML
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container:
+      image: ubuntu:latest
+      options: --privileged
+    env:
+      DEBIAN_FRONTEND: noninteractive
+    steps:
+      - name: Update dependencies
+        run: apt-get update
+      - name: Install utils
+        run: apt-get install -y texlive-xetex pandoc
+      - name: Install fonts
+        run: |
+          echo "ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true" | debconf-set-selections
+          apt-get install -y --reinstall ttf-mscorefonts-installer
+      - name: Setup repository
+        uses: actions/checkout@v4
+      - name: Build PDF
+        run: bash build.sh
+      - name: Upload PDF
+        uses: actions/upload-artifact@v4
+        with:
+          name: lectures
+          path: lectures/*.pdf
+          if-no-files-found: error
+          retention-days: 69
