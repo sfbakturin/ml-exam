@@ -223,10 +223,10 @@ $$
 Мы хотим решить задачу минимизации, если мы попытаемся решить эту задачу аналитически, то мы получим оптимальное решение - это среднее взвешенное. Формула (**ядерное сглаживания Надарая-Ватсона**) в этом случае такая:
 
 $$
-    \begin{align}
+    \begin{aligned}
         a_{\text{NPR}}(u, \mathcal{D}_{\text{train}}) &= \dfrac{\sum_{i = 1}^{|\mathcal{D}_{\text{train}}|}{y_iw_{(i, u)}}}{\sum_{i = 1}^{|\mathcal{D}_{\text{train}}|}{w_{(i, u)}}} \\
         &= \dfrac{\sum_{x_i \in \mathcal{D}_{\text{train}}}{y_iK\left(\dfrac{\rho(x_i, u)}{h}\right)}}{\sum_{x_i \in \mathcal{D}_{\text{train}}}{K\left(\dfrac{\rho(x_i, u)}{h}\right)}}
-    \end{align}
+    \end{aligned}
 $$
 
 В $(1)$ мы берем значения каких-то соседей с заданными весами и делим на сумму весов - получаем среднее взвешенное.

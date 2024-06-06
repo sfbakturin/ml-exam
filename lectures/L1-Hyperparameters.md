@@ -162,10 +162,10 @@ $$
 - Пусть числа - это и есть *целочисленные* значения, тогда
 
     $$
-        \begin{align}
+        \begin{aligned}
             0.1 \rightarrowtail 0 \to \mathtt{Err}_1 \\
             0.2 \rightarrowtail 0 \to \mathtt{Err}_{\underline{\mathbf{1}}}
-        \end{align}
+        \end{aligned}
     $$
 
     То есть, мы хоть и изменили значение, но алгоритм считает, что ничего не изменилось.
@@ -173,11 +173,11 @@ $$
 - Тоже самое происходит и с категориями. Мы сделали One-Hot кодирование, а затем вернули категориальные значения с помощью $\argmax$, тогда
 
     $$
-        \begin{align}
+        \begin{aligned}
             [0.1, ~ 7, ~ -3] \rightarrowtail 2 \to \mathtt{Err}_1 \\
             [0.1, ~ 6, ~ -3] \rightarrowtail 2 \to \mathtt{Err}_1 \\
             [0.1, ~ 7, ~ 6]  \rightarrowtail 2 \to \mathtt{Err}_{\underline{\mathbf{1}}}
-        \end{align}
+        \end{aligned}
     $$
 
     Казалось бы, на третьей итерации у нас произошли сильные изменения в отличия от первой и должна была быть другая ошибка, но из-за $\argmax$ - ровно та же.
