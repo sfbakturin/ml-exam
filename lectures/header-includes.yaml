@@ -1,12 +1,7 @@
 ---
 geometry: margin=2cm
-lang: ru
 header-includes: |
   \usepackage{amsmath}
   \DeclareMathOperator*{\argmax}{arg\,max}
   \DeclareMathOperator*{\argmin}{arg\,min}
-  \newfontfamily{\cyrillicfont}{Arial}
-  \newfontfamily{\cyrillicfontrm}{Arial}
-  \newfontfamily{\cyrillicfonttt}{Arial}
-  \newfontfamily{\cyrillicfontsf}{Arial}
 ---
