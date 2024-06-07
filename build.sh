@@ -7,8 +7,10 @@ for INPUT in *.md; do
     pandoc "${INPUT}" \
         "header-includes.yaml" \
         --pdf-engine=xelatex \
-        -V "mainfont:Times New Roman" \
-        -V "monofont:DejaVu Sans Mono" \
+        -V colorlinks=true \
+        -V linkcolor=blue \
+        -V urlcolor=red \
+        -V toccolor=gray \
         -V geometry:margin=1in \
         -o "${OUTPUT}" || exit 2
     echo "${OUTPUT}"

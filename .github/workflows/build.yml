@@ -14,7 +14,7 @@ jobs:
       - name: Update dependencies
         run: apt-get update
       - name: Install utils
-        run: apt-get install -y texlive-xetex pandoc
+        run: apt-get install -y texlive-xetex pandoc texlive-lang-all
       - name: Install fonts
         run: |
           echo "ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true" | debconf-set-selections
