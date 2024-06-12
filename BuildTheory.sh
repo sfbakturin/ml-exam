@@ -2,7 +2,8 @@
 
 cd theory || exit 1
 
-pandoc "T1.md" \
+pandoc "header-includes.yaml" \
+    "T1.md" \
     "T2.md" \
     "T3.md" \
     "T4.md" \
@@ -34,7 +35,15 @@ pandoc "T1.md" \
     "T30.md" \
     "T31.md" \
     "T32.md" \
-    "header-includes.yaml" \
+    "T33.md" \
+    "T34.md" \
+    "T35.md" \
+    "T36.md" \
+    "T37.md" \
+    "T38.md" \
+    "T39.md" \
+    "T40.md" \
+    "T41.md" \
     --pdf-engine=xelatex \
     -V colorlinks=true \
     -V linkcolor=blue \
