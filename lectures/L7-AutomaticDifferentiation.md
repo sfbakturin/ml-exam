@@ -174,7 +174,7 @@ $$
 Или:
 
 $$
-\dfrac{\partial Q}{\partial u} += df_{u \to v} \( \dfrac{\partial Q }{\partial v} \)
+\dfrac{\partial Q}{\partial u} += df_{u \to v} \left( \dfrac{\partial Q }{\partial v} \right)
 $$
 
 
