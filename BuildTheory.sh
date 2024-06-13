@@ -44,6 +44,7 @@ pandoc "header-includes.yaml" \
     "T39.md" \
     "T40.md" \
     "T41.md" \
+    "T42.md" \
     --pdf-engine=xelatex \
     -V colorlinks=true \
     -V linkcolor=blue \
