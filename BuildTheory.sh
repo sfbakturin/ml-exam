@@ -2,6 +2,8 @@
 
 cd theory || exit 1
 
+echo "Building Theory MDs..."
+
 pandoc "header-includes.yaml" \
     "T1.md" \
     "T2.md" \
@@ -51,8 +53,6 @@ pandoc "header-includes.yaml" \
     -V urlcolor=red \
     -V toccolor=gray \
     -V geometry:margin=1in \
-    -V "mainfont:Arial" \
+    -V "mainfont:Times New Roman" \
     -V "monofont:DejaVu Sans Mono" \
     -o "Theory.pdf"
-
-echo "Theory.pdf"

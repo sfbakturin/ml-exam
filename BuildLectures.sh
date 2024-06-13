@@ -13,7 +13,7 @@ for INPUT in *.md; do
         -V urlcolor=red \
         -V toccolor=gray \
         -V geometry:margin=1in \
-        -V "mainfont:Arial" \
+        -V "mainfont:Times New Roman" \
         -V "monofont:DejaVu Sans Mono" \
         -o "${OUTPUT}" || exit 2
 done
