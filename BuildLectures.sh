@@ -4,6 +4,7 @@ cd lectures || exit 1
 
 for INPUT in *.md; do
     OUTPUT="${INPUT%.*}.pdf"
+    echo "Building ${INPUT}..."
     pandoc "${INPUT}" \
         "header-includes.yaml" \
         --pdf-engine=xelatex \
@@ -15,5 +16,4 @@ for INPUT in *.md; do
         -V "mainfont:Arial" \
         -V "monofont:DejaVu Sans Mono" \
         -o "${OUTPUT}" || exit 2
-    echo "${OUTPUT}"
 done
