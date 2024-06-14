@@ -26,6 +26,7 @@ jobs:
         run: |
           bash BuildLectures.sh
           bash BuildTheory.sh
+          bash BuildAllTheory.sh
       - name: Upload PDF
         uses: actions/upload-artifact@v4
         with:
