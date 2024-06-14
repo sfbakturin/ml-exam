@@ -5,8 +5,9 @@ cd theory || exit 1
 for INPUT in *.md; do
     OUTPUT="${INPUT%.*}.pdf"
     echo "Building ${INPUT}..."
-    pandoc "${INPUT}" \
+    pandoc -H "disable_float.tex" \
         "header-includes.yaml" \
+        "${INPUT}" \
         --pdf-engine=xelatex \
         -V colorlinks=true \
         -V linkcolor=blue \
