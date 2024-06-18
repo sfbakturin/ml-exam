@@ -11,7 +11,7 @@ jobs:
 
     steps:
       - name: Update dependencies
-        run: apt-get update
+        run: sudo apt-get update
 
       - name: Install essentials and fonts
         run: |
